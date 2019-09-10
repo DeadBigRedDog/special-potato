@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+        <div class="col">
+            <h2>Number of coins used: {{recent_change.total_count}} for the amount {{recent_change.initial_value}}</h2>
+            {% for c in coins %}
+            <p>{{c.get_coin_type_value}}</p>
+            {% endfor %}
+          <br>
+        </div>
+      </div>
+{% endblock %}
